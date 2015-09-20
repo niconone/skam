@@ -1,0 +1,12 @@
+{
+    "domain": "localhost",
+    "publicDomain": "skam.club",
+    "port": 3000,
+    "cookie": "secret",
+    "analytics": false,
+    "twilioSID": "<sid>",
+    "twilioToken": "<auth token>",
+    "twilioNumber": "15555555555",
+    "db": "./db",
+    "phoneSalt": "<make me a random string>"
+}

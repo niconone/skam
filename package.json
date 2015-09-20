@@ -1,0 +1,32 @@
+{
+  "name": "skam",
+  "version": "1.0.0",
+  "description": "skam",
+  "private": true,
+  "engines": {
+    "node": "~0.12.x",
+    "npm": "2.x.x"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "boom": "^2.8.0",
+    "concat-stream": "^1.5.0",
+    "hapi": "^8.6.1",
+    "jade": "^1.11.0",
+    "joi": "^6.7.0",
+    "level": "^1.3.0",
+    "nconf": "^0.7.1",
+    "react-native-image-picker": "^0.5.0",
+    "twilio-party": "^1.2.0",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/niconone/skam.git"
+  },
+  "author": "NICONONE",
+  "license": "BSD-3-Clause"
+}
