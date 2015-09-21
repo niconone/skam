@@ -55,6 +55,11 @@ var routes = [
     handler: posts.add
   },
   {
+    method: 'POST',
+    path: '/post/delete',
+    handler: posts.del
+  },
+  {
     method: 'GET',
     path: '/feed/{uid}',
     handler: posts.feedByNetwork
@@ -83,7 +88,7 @@ server.route({
 server.ext('onPreResponse', function(request, reply) {
   var response = request.response;
   if (!response.isBoom) {
-    if (['/post/add', '/feed'].indexOf(request.path) > -1) {
+    if (['/feed', '/post'].indexOf(request.path) > -1) {
       auth.api(request.payload || request.params, function(err) {
         if (err) {
           return reply(Boom.wrap(err, 403));
