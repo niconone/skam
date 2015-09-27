@@ -16,3 +16,36 @@ h1 {
   font-weight: 100;
   opacity: 0.75;
 }
+
+#feed-wrapper {
+  margin-top: 30px;
+}
+
+.feed-item {
+  background-size: cover;
+  background-color: #f00;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.video {
+  height: 350px;
+  position: relative;
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  height: 350px;
+  width: 100%;
+}
+
+.comment {
+  background-color: rgba(1, 1, 1, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}

@@ -1,0 +1,17 @@
+extend layout
+
+block content
+  h1 skam
+
+  #feed-wrapper
+    for post in posts
+      if post.value.backgroundSource.uri !== 'skam-launch'
+        .feed-item(style='background-image: url(' + post.value.backgroundSource.uri + ');')
+          .video
+            iframe(src='#{post.value.link}', frameborder=0, allowfullscreen)
+          p.comment= post.value.comment
+      else
+        .feed-item(style='background-image: url(/images/back.jpg);')
+          .video
+            iframe(src='#{post.value.link}', frameborder=0, allowfullscreen)
+          p.comment= post.value.comment
