@@ -2,8 +2,8 @@ extend layout
 
 mixin feedView(post)
   - var backgroundSource = post.value.backgroundSource.uri
-  if background !== 'skam-launch'
-    - var backgroundSource = '/images/back.jpg'
+  if post.value.backgroundSource.uri === 'skam-launch'
+    - backgroundSource = '/images/back.jpg'
 
   .feed-item(style='background-image: url(' + backgroundSource + ');')
     .video
