@@ -49,3 +49,24 @@ iframe {
   font-size: 1.5rem;
   font-weight: 100;
 }
+
+.avatar-wrapper {
+  background-color: rgba(15, 255, 156, 0.5);
+  height: 100px;
+}
+
+.avatar-wrapper img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.avatar-wrapper span {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #111;
+  line-height: 6rem;
+  float: left;
+}

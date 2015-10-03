@@ -1,17 +1,23 @@
 extend layout
 
+mixin feedView(post)
+  - var backgroundSource = post.value.backgroundSource.uri
+  if background !== 'skam-launch'
+    - var backgroundSource = '/images/back.jpg'
+
+  .feed-item(style='background-image: url(' + backgroundSource + ');')
+    .video
+      iframe(src='#{post.value.link}', frameborder=0, allowfullscreen)
+    .avatar-wrapper
+      if post.value.avatar.uri
+        img(src='#{post.value.avatar.uri}')
+      else
+        img(src='/images/skam-icon.png')
+      span= post.value.name
+
 block content
   h1 skam
 
   #feed-wrapper
     for post in posts
-      if post.value.backgroundSource.uri !== 'skam-launch'
-        .feed-item(style='background-image: url(' + post.value.backgroundSource.uri + ');')
-          .video
-            iframe(src='#{post.value.link}', frameborder=0, allowfullscreen)
-          p.comment= post.value.comment
-      else
-        .feed-item(style='background-image: url(/images/back.jpg);')
-          .video
-            iframe(src='#{post.value.link}', frameborder=0, allowfullscreen)
-          p.comment= post.value.comment
+      +feedView(post)
