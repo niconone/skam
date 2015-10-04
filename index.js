@@ -9,6 +9,7 @@ var http = require('http');
 var views = require('./lib/views');
 var auth = require('./lib/auth');
 var posts = require('./lib/posts');
+var contacts = require('./lib/contacts');
 
 var server = new Hapi.Server();
 
@@ -68,6 +69,11 @@ var routes = [
     method: 'POST',
     path: '/profile',
     handler: auth.profile
+  },
+  {
+    method: 'POST',
+    path: '/contact/add',
+    handler: contacts.add
   },
   {
     method: 'POST',
