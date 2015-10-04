@@ -82,6 +82,16 @@ var routes = [
   },
   {
     method: 'POST',
+    path: '/contacts/trustnetwork',
+    handler: contacts.getTrustedNetwork
+  },
+  {
+    method: 'POST',
+    path: '/posts/network',
+    handler: posts.network
+  },
+  {
+    method: 'POST',
     path: '/api',
     handler: auth.api
   }
