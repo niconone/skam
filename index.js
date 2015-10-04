@@ -77,6 +77,11 @@ var routes = [
   },
   {
     method: 'POST',
+    path: '/contact/addnetwork',
+    handler: contacts.addFromNetwork
+  },
+  {
+    method: 'POST',
     path: '/api',
     handler: auth.api
   }
