@@ -67,6 +67,11 @@ var routes = [
   },
   {
     method: 'POST',
+    path: '/posts/by',
+    handler: posts.feedByUser
+  },
+  {
+    method: 'POST',
     path: '/profile',
     handler: auth.profile
   },
